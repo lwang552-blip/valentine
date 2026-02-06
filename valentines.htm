@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;title&gt;Be My Valentine&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-family: "Poppins", sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding-top: 120px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, #ffe6f2, #ffd6e8, #fff0f7);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #d6336c;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animation: fadeIn 1.5s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px 35px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.3rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transition: transform 0.2s ease, box-shadow 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transform: scale(1.08);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: 0 8px 18px rgba(0,0,0,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#yesBtn {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #70e000;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animation: bounce 1.5s infinite ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#noBtn {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #ff4d6d;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Floating hearts background */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.heart {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>bottom: -10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #ff4d6d;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animation: floatUp 6s linear infinite;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>opacity: 0.7;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes floatUp {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>0% { transform: translateY(0) translateX(0); opacity: 0.8; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>100% { transform: translateY(-120vh) translateX(40px); opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes bounce {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>0%, 100% { transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>50% { transform: translateY(-8px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes shake {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>0% { transform: translateX(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>25% { transform: translateX(-6px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>50% { transform: translateX(6px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>75% { transform: translateX(-6px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>100% { transform: translateX(0); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>from { opacity: 0; transform: translateY(-20px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#heart {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 180px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #ff4d88;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animation: pulse 1.5s infinite ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes pulse {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>0%, 100% { transform: scale(1); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>50% { transform: scale(1.15); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h1 id="question"&gt;Will you be my Valentine PLEASE&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;button id="yesBtn"&gt;Yes&lt;/button&gt;</p>
+<p class="p1">&lt;button id="noBtn"&gt;No&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="heart"&gt;❤️&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// Floating hearts generator</p>
+<p class="p1">setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const heart = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.classList.add("heart");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.style.left = Math.random() * window.innerWidth + "px";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.style.fontSize = (20 + Math.random() * 20) + "px";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.textContent = "❤️";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.body.appendChild(heart);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(() =&gt; heart.remove(), 6000);</p>
+<p class="p1">}, 500);</p>
+<p class="p2"><br></p>
+<p class="p1">// No button text sequence</p>
+<p class="p1">const noTexts = [</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"that's sad, please don't press no again",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"wow really, you really don't love me",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"this is outrageous, you must have another boyfriend",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"JUST SAY YES ALREADY",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"too bad you're mine, press this button one more time"</p>
+<p class="p1">];</p>
+<p class="p2"><br></p>
+<p class="p1">let noClickCount = 0;</p>
+<p class="p2"><br></p>
+<p class="p1">const yesBtn = document.getElementById("yesBtn");</p>
+<p class="p1">const noBtn = document.getElementById("noBtn");</p>
+<p class="p1">const heart = document.getElementById("heart");</p>
+<p class="p1">const question = document.getElementById("question");</p>
+<p class="p2"><br></p>
+<p class="p1">// Handle NO button presses</p>
+<p class="p1">noBtn.addEventListener("click", () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>noBtn.style.animation = "shake 0.4s";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>noBtn.style.animation = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}, 400);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (noClickCount &lt; noTexts.length) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>noBtn.textContent = noTexts[noClickCount];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>noClickCount++;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>noBtn.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// Handle YES button press</p>
+<p class="p1">yesBtn.addEventListener("click", () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Confetti effect</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (let i = 0; i &lt; 180; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const confetti = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.position = "fixed";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.width = "10px";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.height = "10px";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.backgroundColor =<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>`hsl(${Math.random() * 360}, 100%, 70%)`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.top = "-10px";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.left = Math.random() * window.innerWidth + "px";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.opacity = 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.transform = `rotate(${Math.random()*360}deg)`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>confetti.style.transition = "top 2.2s ease-out, opacity 2.2s";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.body.appendChild(confetti);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>confetti.style.top = window.innerHeight + "px";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>confetti.style.opacity = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, 10);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; confetti.remove(), 2300);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Show heart</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.style.display = "block";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Change question text</p>
+<p class="p1"><span class="Apple-converted-space">    </span>question.textContent = "YAY! ❤️";</p>
+<p class="p1">});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
